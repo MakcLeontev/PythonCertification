@@ -6,29 +6,40 @@ class Note:
         self.__header = header
         self.__id = id
 
-    def set_date_time(self, date_time):
-        self.__date_time = date_time
-
-    def get_date_time(self):
+    @property
+    def date_time(self):
         return self.__date_time
 
-    def set_text(self, text):
-        self.__text = text
+    @date_time.setter
+    def date_time(self, date_time):
+        self.__date_time = date_time
 
-    def get_text(self):
+
+    @property
+    def text(self):
         return self.__text
 
-    def set_header(self, header):
-        self.__header = header
+    @text.setter
+    def text(self, text):
+        self.__text = text
 
-    def get_header(self):
+
+    @property
+    def header(self):
         return self.__header
 
-    def set_id(self, id):
-        self.__id
+    @header.setter
+    def header(self, header):
+        self.__header = header
 
-    def get_id(self):
+    
+    @property
+    def id(self):
         return self.__id
+
+    @id.setter
+    def id(self, id):
+        self.__id
 
     def note_info(self):
         print(f"id:{self.__id} заголовок:{self.__header} тело заметки:{self.__text} дата,время создания:{self.__date_time}")
@@ -36,5 +47,5 @@ class Note:
     def __str__(self) -> str:
         return f"{str(self.__id)};{self.__header};{self.__text};{str(self.__date_time)}"
 
-note = Note(1, "first", "fgblweqgfiwe",534)
-print(note)
+#note = Note(1, "first", "fgblweqgfiwe",534)
+#print(note)
