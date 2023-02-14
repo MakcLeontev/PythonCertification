@@ -6,6 +6,8 @@ class Note:
         self.__header = header
         self.__id = id
 
+ 
+
     @property
     def date_time(self):
         return self.__date_time
@@ -47,5 +49,6 @@ class Note:
     def __str__(self) -> str:
         return f"{str(self.__id)};{self.__header};{self.__text};{str(self.__date_time)}"
 
-#note = Note(1, "first", "fgblweqgfiwe",534)
-#print(note)
+    
+
+

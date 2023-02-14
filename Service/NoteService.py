@@ -3,28 +3,28 @@ import datetime
 from Note import Note
 
 
-class NoteService:
+class NoteService :
     
 
     def next_id(self, list):
-        return  list[-1].id+1
+        if len(list)!=0:
+            return  int(list[-1].id)+1
+        else:
+            return 1
     
-
     def now_date_time(self):
         return datetime.datetime.now()
 
-l=[]        
-id=NoteService() 
-one=Note(1,"reqgre","qwee",3443) 
-two=Note(2,"reqgre","qwee",3445)
-print(two.id)
-l.append(one)
-l.append(two)  
-three=l[-1]
-print(three.id+1)
-four=id.next_id(l)
-print(four)
-print(id.now_date_time())
+    def create_note(self, list, header, text):
+        note_service=NoteService()
+        id=note_service.next_id(list)
+        date_time=note_service.now_date_time()
+        return Note(id, header, text, date_time)
+    
+    
+
+
+
 
 
 
