@@ -1,5 +1,5 @@
 from ast import List
-import datetime
+from datetime import date
 from Note import Note
 
 
@@ -13,7 +13,7 @@ class NoteService :
             return 1
     
     def now_date_time(self):
-        return datetime.datetime.now()
+        return date.today()
 
     def create_note(self, list, header, text):
         note_service=NoteService()

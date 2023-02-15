@@ -1,9 +1,7 @@
 
 from Controller import Controller
 
-
-
-command_list=["ADD","EXIT","READ","DATE","SELECT","DELETE","EDIT"]
+command_list=["ADD","EXIT","READ","DATE","SELECT","DELETE","EDIT","HELP"]
 
 def start():
 
@@ -20,14 +18,16 @@ def start():
             elif(com == "ADD"):
                 contr.add()
             elif(com == "READ"):
-                pass
+                contr.read()
             elif(com == "DATE"):
-                pass
+                contr.date()
             elif(com == "SELECT"):
-                pass
+                contr.select()
             elif(com == "DELETE"):
-                pass
+                contr.delete()
             elif(com == "EDIT"):
-                pass
+                contr.edit()
+            elif(com == "HELP"):
+                contr.help()
 
 
